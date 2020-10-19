@@ -1,0 +1,49 @@
+@media (max-width: 1024px) {
+    #menuLogo {
+        display: none;
+    }
+    #menuNav nav ul {
+        flex-flow: wrap;
+    }
+    #menuNav nav ul li {
+        margin: 0.5em 0;
+    }
+    #menuNav {
+        height: auto;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1024px) {
+    #about {
+        flex-flow: column wrap;
+    }
+}
+
+@media (max-width:500px) {
+    #menuNav {
+        height: auto;
+    }
+    #menuLink nav ul {
+        padding: 0;
+        flex-flow: column wrap;
+    }
+    #menuLink {
+        justify-content: center;
+    }
+    #contact {
+        flex-flow: column wrap;
+    }
+    #contact .rs {
+        padding: 5%;
+        justify-content: center;
+    }
+    #about .blockTexte {
+        padding: 10% 5%;
+    }
+    #about .blockImg {
+        display: none;
+    }
+    #services .blockBot {
+        flex-flow: nowrap column;
+    }
+}

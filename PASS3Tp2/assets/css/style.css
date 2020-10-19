@@ -1,0 +1,19 @@
+#heroHeader{
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+
+h1{
+    color: orange;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+#services figure img{
+    width: 20%;
+}

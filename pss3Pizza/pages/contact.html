@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/menu.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <title>Contact - Pizza Délicious</title>
+</head>
+
+<header>
+    <section id="menuNav">
+        <div id="menuLogo">
+            <img src="images/logoPizza.jpg" alt="Logo Entreprise">
+        </div>
+        <div id="menuLink">
+            <nav aria-label="Header">
+                <ul>
+                    <li>
+                        <a href="/" onclick="dodajAktywne(this)" class="from-bottom">Home</a>
+                    </li>
+                    <li>
+                        <a href="../#menu" onclick="dodajAktywne(this)" class="from-bottom">Menu</a>
+                    </li>
+                    <li>
+                        <a href="../#services" onclick="dodajAktywne(this)" class="from-bottom">Services</a>
+                    </li>
+                    <li>
+                        <a href="../#blog" onclick="dodajAktywne(this)" class="from-bottom">Blog</a>
+                    </li>
+                    <li>
+                        <a href="../#about" onclick="dodajAktywne(this)" class="from-bottom">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" onclick="dodajAktywne(this)" class="from-bottom">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</header>
+
+<body>
+    <!-- <section id="contactForm">
+        <form action="../assets/php/formContact.php" method="post">
+            <div class="row">
+                <div class="col1">
+                    <label for="nom">Nom : </label>
+                    <input type="text" name="nom" id="nom">
+                </div>
+                <div class="col2">
+                    <label for="prenom">Prénom : </label>
+                    <input type="text" name="prenom" id="prenom">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col1">
+                    <label for="sujet">Sujet : </label>
+                    <input type="text" name="sujet" id="sujet">
+                </div>
+                <div class="col2">
+                    <label for="email">Email : </label>
+                    <input type="email" name="email" id="email">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="message">Message : </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+
+            </div>
+        </form>
+    </section> -->
+    <div class="contain">
+
+        <div class="wrapper">
+            <div class="contacts">
+                <h3>Nos informations de contact</h3>
+
+                <ul>
+                    <li>San Joe St.</li>
+                    <li>00-1212121-11</li>
+                    <li>mail@mail.com</li>
+                </ul>
+            </div>
+
+            <div class="form">
+                <h3>Contactez nous facilement !</h3>
+                <form action="../assets/php/send_form.php" method="post">
+                    <div>
+                        <label for="nom">Nom :</label>
+                        <input type="text" name="nom" id="nom">
+                    </div>
+                    <div>
+                        <label for="nom">Prénom :</label>
+                        <input type="text" name="prenom" id="prenom">
+                    </div>
+                    <div>
+                        <label for="nom">Email :</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="nom">Téléphone :</label>
+                        <input type="tel" name="tel" id="tel">
+                    </div>
+                    <div class="full-width">
+                        <label for="message">Votre message :</label>
+                        <textarea name="message" id="message" cols="30" rows="7"></textarea>
+                    </div>
+                    <div class="full-width">
+                        <button type="submit">Envoyer ...</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
