@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Nothing+You+Could+Do&family=Poppins:wght@300;400&display=swap");
+:root {
+    --primary-color: #000;
+    --secondary-color: #fac564;
+    --text-color: #fff;
+    --secondary-text-color: #6c6c6c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ======================== BEANDEAU TOP ======================== */
+
+#bandeauBleu {
+    background-color: darkblue;
+    height: 20px;
+}
+
+
+/* ======================== NAVIGATION TOP ======================== */
+
+#navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navigation .navLink {
+    display: flex;
+}
+
+#navigation .navLink li {
+    list-style: none;
+    margin: 0 0.2em;
+    padding: 0 0.2em;
+}
+
+#navigation .navLink li a {
+    text-decoration: none;
+}
+
+
+/* ======================== HERO TOP ======================== */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#hero .blockText {
+    display: flex;
+    padding: 5% 20%;
+    max-width: 85%;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero .blockText h1,
+#hero .blockText p {
+    color: white;
+}
+
+#hero .blockText h1 {
+    font-size: 2em;
+}
+
+#hero .blockText p {
+    text-align: center;
+}
+
+#hero .blockText .btnContainer button {
+    border: 1px solid white;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+
+/* ======================== ABOUT ======================== */
+
+#about {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#about .blockText {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    align-items: center;
+}
+
+#about .blockText .spanCaratceristiques {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .blockText .spanCaratceristiques span {
+    padding: 0 0 0 0.2em;
+    margin: 0 0 10px 0.2em;
+    background-color: darkblue;
+    border-bottom: 2px solid red;
+}
