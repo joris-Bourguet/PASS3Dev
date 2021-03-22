@@ -1,0 +1,33 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    /* ============================= SECTION ============================= */
+    
+    .container1 {
+        background-color: tomato;
+        height: 100vh;
+    }
+    
+    .container2 {
+        background-color: green;
+        height: 100vh;
+    }
+    
+    .container3 {
+        background-color: purple;
+        height: 100vh;
+    }
+    
+    .container4 {
+        background-color: blue;
+        height: 100vh;
+    }
+    
+    .container5 {
+        background-color: chocolate;
+        height: 100vh;
+    }

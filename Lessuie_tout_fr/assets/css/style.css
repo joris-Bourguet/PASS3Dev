@@ -2,8 +2,11 @@
 :root {
     --primary-color: #000;
     --secondary-color: #fac564;
+
     --text-color: #fff;
-    --secondary-text-color: #6c6c6c;
+    --text-color-dark: #000;
+
+    --bandeau-color: #041e4c;
 }
 
 html {
@@ -33,9 +36,40 @@ body {
 /* ======================== BEANDEAU TOP ======================== */
 
 #bandeauBleu {
-    background-color: darkblue;
-    height: 20px;
+    background-color: var(--bandeau-color);
+    display: flex;
+    justify-content: space-between;
 }
+
+#bandeauBleu .logo img {
+    width: 10%;
+}
+
+#bandeauBleu .logo p {
+    color: var(--text-color);
+    font-size: 0.8em;
+}
+
+#bandeauBleu .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#bandeauBleu .infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 20px;
+    gap: 20px;
+}
+
+#bandeauBleu .infos i{
+    color: var(--text-color);
+    font-size: 0.8em;
+}
+
 
 
 /* ======================== NAVIGATION TOP ======================== */
@@ -46,8 +80,20 @@ body {
     align-items: center;
 }
 
+#navigation .blockImg img{
+    width: 100%;
+}
+
 #navigation .navLink {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 400px){
+    #navigation .navLink {
+        flex-direction: column;
+    }
 }
 
 #navigation .navLink li {
@@ -58,8 +104,31 @@ body {
 
 #navigation .navLink li a {
     text-decoration: none;
+    position: relative;
+    color: var(--text-color-dark);
 }
 
+
+#navigation .navLink li a::after {
+    content: '';
+    transform-origin: 0 0; 
+    transform: scaleX(0.2);
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    height: .4em; 
+    background: var(--secondary-color);
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform .3s;
+}
+
+#navigation .navLink li a:hover::after {
+    transform: scaleX(1);
+    transform: scaleY(-3);
+    bottom: -5px;
+}
 
 /* ======================== HERO TOP ======================== */
 
@@ -69,20 +138,31 @@ body {
     padding: 20px 0;
 }
 
+#hero .blockText::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../../images/background.jpg) center;
+    background-size: cover;
+}
+
 #hero .blockText {
+    position: relative;
     display: flex;
     padding: 5% 20%;
     max-width: 85%;
     flex-direction: column;
     align-items: center;
-    background-image: url(../../images/background.jpg);
-    background-position: center;
-    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
 }
 
 #hero .blockText h1,
 #hero .blockText p {
-    color: white;
+    color: var(--text-color);
 }
 
 #hero .blockText h1 {
@@ -93,11 +173,27 @@ body {
     text-align: center;
 }
 
-#hero .blockText .btnContainer button {
-    border: 1px solid white;
-    box-shadow: none;
-    background-color: transparent;
+#hero .blockText .btnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+#hero .blockText .btnContainer a {
+    border: 1px solid #fff;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 10px;
+    margin: 5px;
+    color: var(--text-color);
+}
+
+#hero .blockText .btnContainer a:hover {
+    background-color: var(--primary-color);
+    border: 1px solid #000;
+    color: var(--text-color);
+}
+
 
 
 /* ======================== ABOUT ======================== */
@@ -115,14 +211,120 @@ body {
     align-items: center;
 }
 
+#about .blockText .title {
+    position: relative;
+}
+#about .blockText .title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 0.3em;
+    background: var(--secondary-color);
+}
+
 #about .blockText .spanCaratceristiques {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#about .blockText .spanCaratceristiques span {
-    padding: 0 0 0 0.2em;
-    margin: 0 0 10px 0.2em;
-    background-color: darkblue;
-    border-bottom: 2px solid red;
+#about .blockText .spanCaratceristiques a {
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-color);
+}   
+
+#about .blockText .spanCaratceristiques a::after {
+    content: '';
+    transform-origin: 0 0; 
+    transform: scaleX(0.2);
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    left: 50%;
+    height: .4em; 
+    background: var(--secondary-color);
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform .3s;
+}
+#about .blockText .spanCaratceristiques a::before {
+    content: '';
+    transform-origin: 0 0; 
+    transform: scaleX(-0.2);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    right: 0;
+    height: .4em; 
+    background: var(--secondary-color);
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform .3s;
+}
+
+#about .blockText .spanCaratceristiques a:hover::after {
+    transform: scaleX(1);
+}
+
+#about .blockText .spanCaratceristiques a:hover::before {
+    transform: scaleX(-1);
+}
+
+
+/* ======================== Comment ======================== */
+#commentaire {
+    padding: 50px 0 ;
+}
+
+#commentaire .blockText {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#commentaire .blockText .content {
+    max-width: 70%;
+    position: relative;
+    text-align: center;
+}
+
+#commentaire .blockText .content::before {
+    content: '„';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    font-size: 4em;
+}
+
+#commentaire .blockText .content::after {
+    content: '„';
+    position: absolute;
+    bottom: 23px;
+    right: -107px;
+    font-size: 4em;
+}
+
+#commentaire .blockText .name {
+    position: relative;
+}
+
+#commentaire .blockText .name::before{
+    content: '-';
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    font-size: 2em;
+}
+#commentaire .blockText .name::after {
+    content: '-';
+    position: absolute;
+    right: -20px;
+    top: -10px;
+    font-size: 2em;
 }

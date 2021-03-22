@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&family=Quicksand:wght@600&display=swap');
+:root {
+    --text-primary: #000000;
+    --text-secondary: #ffffff;
+    --text-accent: #4682B4;
+    --bg-primary-color: #ffffff;
+    --bg-secondary-color: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 
+Fonts Règles :
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+*/
+
+* {
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ============================ TAILLE_SECTION ============================ */
+
+#menu,
+#topHero,
+#breadcrumb,
+#articles,
+#footerNav,
+#copyright {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* ============================ TOP_LOGO ============================ */
+
+#topLogo {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+
+/* ============================ MENU ============================ */
+
+#menu .nav {
+    background-color: var(--bg-secondary-color);
+}
+
+#menu .nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+}
+
+#menu .nav ul li {
+    list-style: none;
+}
+
+#menu .nav ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    margin: 0 10px;
+    padding: 0 10px;
+    transition: 0.5s;
+}
+
+#menu .nav ul li a:hover {
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary);
+}
+
+
+/* ============================ TOP_HERO ============================ */
+
+#topHero {
+    background-image: url(../../image/bg-cover.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+#topHero .block1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#topHero .block1 * {
+    z-index: 1;
+}
+
+#topHero .block1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(200, 200, 200, 0.4);
+    z-index: 0;
+}
+
+
+/* ============================ BREADCRUMB ============================ */
+
+#breadcrumb {
+    margin: 14px auto 35px;
+}
+
+#breadcrumb ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+}
+
+#breadcrumb ul li a {
+    text-decoration: none;
+    position: relative;
+    margin: 0 2px;
+    padding: 0 2px;
+    color: var(--text-primary);
+}
+
+#breadcrumb ul li a::after {
+    content: '';
+    transform-origin: 0 0;
+    transform: scaleX(0.2);
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    left: 50%;
+    height: .4em;
+    background: var(--text-accent);
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform .3s;
+}
+
+#breadcrumb ul li a::before {
+    content: '';
+    transform-origin: 0 0;
+    transform: scaleX(-0.2);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    right: 0;
+    height: .4em;
+    background: var(--text-accent);
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform .3s;
+}
+
+#breadcrumb ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+#breadcrumb ul li a:hover::before {
+    transform: scaleX(-1);
+}
+
+#breadcrumb ul li:first-child::before {
+    content: '>';
+}
+
+#breadcrumb ul li:not(:first-child)::before {
+    content: '/';
+}
+
+
+/* ============================ ARTICLES ============================ */
+
+#articles {
+    display: flex;
+    justify-content: center;
+    gap: 6ch;
+    flex-wrap: wrap;
+}
+
+#articles .articleClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: min-content;
+}
+
+#articles .articleClass p {
+    text-align: center;
+}
+
+#articles .articleClass img {
+    width: 70%;
+}
+
+#articles .articleClass a.addToCart {
+    border: 1px solid var(--bg-secondary-color);
+    background-color: var(--bg-secondary-color);
+    padding: 0.2em 2em;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    #articles .articleClass {
+        flex: auto;
+        position: relative;
+    }
+    #articles .articleClass:not(:last-child):after {
+        position: absolute;
+        content: '';
+        bottom: -10%;
+        left: 30%;
+        right: 30%;
+        height: 0.2em;
+        background-color: var(--text-accent);
+    }
+    #articles .articleClass img {
+        width: 30%;
+    }
+}
+
+
+/* ============================ FOOTER ============================ */
+
+footer {
+    margin: 40px auto 25px;
+}
+
+#footerNav,
+#copyright {
+    background-color: var(--bg-secondary-color);
+}
+
+
+/* NAV */
+
+#footerNav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 15px;
+}
+
+#footerNav ul li {
+    list-style: none;
+}
+
+#footerNav ul a {
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 0 10px;
+    color: var(--text-secondary);
+}
+
+
+/* COPYRIGHT */
+
+#copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#copyright p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+#copyright p a {
+    color: var(--text-accent);
+    text-decoration: none;
+}

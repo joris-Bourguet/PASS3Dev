@@ -1,0 +1,10 @@
+ftp ======== 
+Nom d’utilisateur FTP: ftp_joris.dcpass.fr@joris.dcpass.fr
+Serveur FTP: ftp.xnbw1436.odns.fr
+mot de passse : H4?f5LN&PzCt
+Port FTP & et FTPS explicite:  21
+
+
+Mail ===========
+contact@joris.dcpass.fr
+CEMm9sFY6C8$
